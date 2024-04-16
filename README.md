@@ -1,83 +1,74 @@
-# AniHelp
+# AniHelp: First Group Project
 
-### Configuration (common.js)
+## Welcome to AniHelp!
 
-This contains all configuration for Firebase and TomTom. It also includes conversion of error messages into a user-friendly error message.
+Welcome to "AniHelp" – our first group project. We, a team of 4 developers and 4 designers, collaborated to create this helpful web app. AniHelp facilitates reporting of injured animals to organizations by providing location, pictures, and a form with incident details.
 
+## Purpose
 
-### class/organization.js
+AniHelp helps organizations efficiently manage inquiries in one platform. Additionally, it allows users to easily create reports for the correct organization, selecting ones closest and most specialized for the type of animal involved.
 
-Contains all organization-related classes and activities.
+## Technologies Used
 
-**getAllOrganizations**
+### Front End:
+- HTML
+- CSS
+- JavaScript
+- Sass
+- Bootstrap
 
-Returns the list of organizations from the "organizations" collection in Firestore
+### Back End:
+- Node.js
+- Firebase
+- TomTom API
 
-**getOrganization(uid)**
-  - This function loops through each document in the organization collection to find which organization contains the uid.
-    ![image](https://github.com/zeckkimon/AniHelp/assets/26020262/74b7886c-99a5-45e1-a23e-6587e363cc33)
+## Features Implemented 
 
+- Responsive design ensuring compatibility across devices
+- Location services integration with TomTom API for enhanced user experience
+- Database and authentication solutions applied
+- Implementation of complex JavaScript functions for better solutions
+- Bootstrap and Sass used for better UX and easy style management
 
-  - The uid is should be from Fire Auth. It is specified when the user logs in.
-    ![image](https://github.com/zeckkimon/AniHelp/assets/26020262/a2bea98c-86ea-48c3-b92e-cfe179b6ab89)
+## How to Run
 
-  > [!IMPORTANT]
-  > An account should be assigned to only one organization. If assigned to multiple, only one organizaton will be returned.
+To view the website locally, follow these steps:
 
+1. Clone this repository to your local machine.
 
-<!-- =============== Credits for the images in the reports =============== -->
+2. Navigate to the project directory.
 
-Pixabay: https://www.pexels.com/photo/black-deer-lying-on-plants-near-green-trees-during-daytime-76972/
-Pixabay: https://www.pexels.com/photo/brown-bear-on-a-body-of-water-158109/
-Jan Kopczyński: https://www.pexels.com/photo/cute-dog-sitting-on-wood-log-in-forest-16271644/
-Niklas Jeromin: https://www.pexels.com/photo/brown-deer-standing-on-brown-soil-3832008/
-Yana Kangal: https://www.pexels.com/photo/cat-lying-down-on-blanket-on-beach-17459297/
-Nicky Pe: https://www.pexels.com/photo/photo-of-a-cougar-near-a-log-7598287/
-Skyler Ewing: https://www.pexels.com/photo/adorable-chipmunk-with-peanut-in-nature-5627781/
-Andrey Yudkin: https://www.pexels.com/photo/raccoon-standing-on-fallen-leaves-9179705/
-Steve: https://www.pexels.com/photo/grey-and-white-wolf-selective-focus-photography-682361/
-Pranavsinh suratia: https://www.pexels.com/photo/close-up-shot-of-a-bat-12019751/
-Esteban Arango: https://www.pexels.com/photo/coyote-lying-on-grass-10226903/
-Jean van der Meulen: https://www.pexels.com/photo/close-up-photo-of-owl-with-one-eye-open-1564839/
-Aa Dil: https://www.pexels.com/photo/close-up-photo-of-owl-2474014/
-Jean van der Meulen: https://www.pexels.com/photo/portrait-photo-of-brown-and-gray-bird-1526410/
-Ana  Pereira: https://www.pexels.com/photo/close-up-of-goose-17993136/
-Osmany Mederos: https://www.pexels.com/photo/crow-walking-on-grass-ground-16057123/
-Erik Karits: https://www.pexels.com/photo/black-bearded-dragon-on-green-grass-3820309/
-Macro Photography: https://www.pexels.com/photo/frog-hiding-from-rain-under-a-leaf-12569708/
-Silvana Palacios: https://www.pexels.com/photo/black-and-white-whale-jumping-on-water-3635870/
-Guillaume Hankenne: https://www.pexels.com/photo/gray-dolphin-on-body-of-water-1986374/
-Skitterphoto: https://www.pexels.com/photo/sea-animal-dog-zoo-23087/
+3. Open the `index.html` file in your web browser.
 
-<!-- =============== Credits for the images in the presentation =============== -->
-
-p1 https://stock.adobe.com/images/the-hands-of-the-family-and-the-furry-paw-of-the-cat-as-a-team-fighting-for-animal-rights-helping-animals/250319373
-P3 https://stock.adobe.com/images/brown-turtle-isolated-on-white/589205562
-P5 https://stock.adobe.com/images/woman-taking-a-picture-of-her-dog-with-the-phone/224255743
-p6 https://stock.adobe.com/ca/images/closeup-of-business-woman-hands-typing-on-keyboard-working-online-in-modern-office-programmer-coder-using-laptop-computer-at-workplace-remote-job-concept-technology-concept/624566492
-p12 https://stock.adobe.com/images/young-handsome-adult-man-working-in-animal-shelter/462493334
-p13 https://stock.adobe.com/images/volunteer-with-cute-raccoon-in-animal-shelter-closeup/447848579
+4. You can now interact with the website locally in your browser.
 
 
+## Program Walk-through
 
 
+## Image Credits
 
+We would like to thank the following photographers and platforms for providing the images used in the reports:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Pixabay: [Link](https://www.pexels.com/photo/black-deer-lying-on-plants-near-green-trees-during-daytime-76972/)
+- Pixabay: [Link](https://www.pexels.com/photo/brown-bear-on-a-body-of-water-158109/)
+- Jan Kopczyński: [Link](https://www.pexels.com/photo/cute-dog-sitting-on-wood-log-in-forest-16271644/)
+- Niklas Jeromin: [Link](https://www.pexels.com/photo/brown-deer-standing-on-brown-soil-3832008/)
+- Yana Kangal: [Link](https://www.pexels.com/photo/cat-lying-down-on-blanket-on-beach-17459297/)
+- Nicky Pe: [Link](https://www.pexels.com/photo/photo-of-a-cougar-near-a-log-7598287/)
+- Skyler Ewing: [Link](https://www.pexels.com/photo/adorable-chipmunk-with-peanut-in-nature-5627781/)
+- Andrey Yudkin: [Link](https://www.pexels.com/photo/raccoon-standing-on-fallen-leaves-9179705/)
+- Steve: [Link](https://www.pexels.com/photo/grey-and-white-wolf-selective-focus-photography-682361/)
+- Pranavsinh Suratia: [Link](https://www.pexels.com/photo/close-up-shot-of-a-bat-12019751/)
+- Esteban Arango: [Link](https://www.pexels.com/photo/coyote-lying-on-grass-10226903/)
+- Jean van der Meulen: [Link](https://www.pexels.com/photo/close-up-photo-of-owl-with-one-eye-open-1564839/)
+- Aa Dil: [Link](https://www.pexels.com/photo/close-up-photo-of-owl-2474014/)
+- Jean van der Meulen: [Link](https://www.pexels.com/photo/portrait-photo-of-brown-and-gray-bird-1526410/)
+- Ana Pereira: [Link](https://www.pexels.com/photo/close-up-of-goose-17993136/)
+- Osmany Mederos: [Link](https://www.pexels.com/photo/crow-walking-on-grass-ground-16057123/)
+- Erik Karits: [Link](https://www.pexels.com/photo/black-bearded-dragon-on-green-grass-3820309/)
+- Macro Photography: [Link](https://www.pexels.com/photo/frog-hiding-from-rain-under-a-leaf-12569708/)
+- Silvana Palacios: [Link](https://www.pexels.com/photo/black-and-white-whale-jumping-on-water-3635870/)
+- Guillaume Hankenne: [Link](https://www.pexels.com/photo/gray-dolphin-on-body-of-water-1986374/)
+- Skitterphoto: [Link](https://www.pexels.com/photo/sea-animal-dog-zoo-23087/)
 
