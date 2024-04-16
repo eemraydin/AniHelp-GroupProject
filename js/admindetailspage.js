@@ -2,6 +2,7 @@ import { auth, ttkey } from './common.js'
 import { getReportById, getStatus,getStatusList, updateReportStatus, reportStatusList  } from './class/report.js';
 import { getOrganizationById } from './class/organization.js';
 
+
 let user_lng = ""
 let user_lat = ""
 let queryString = window.location.search; //http://localhost:5500/pages/detailspage.html?id=10YMy89nBl1UsadErM3I (example for video)
