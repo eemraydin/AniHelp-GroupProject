@@ -2,7 +2,7 @@
 
 ## Welcome to AniHelp!
 
-Welcome to "AniHelp" – our first group project. We, a team of 4 developers and 4 designers, collaborated to create this helpful web app in 12 weeks. AniHelp facilitates reporting of injured animals to organizations by providing location, pictures, and a form with incident details.
+Welcome to "AniHelp" – our first group project. We, a team of 4 developers and 4 designers, collaborated to create this helpful web app in less than 8 weeks. AniHelp facilitates reporting of injured animals to organizations by providing location, pictures, and a form with incident details.
 
 ## Purpose
 
