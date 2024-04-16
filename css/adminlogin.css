@@ -1,0 +1,125 @@
+@import url("./style.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("./global.css");
+
+header{
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+h3{
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+label{
+    font-family: Lato;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+footer{
+    display: none;
+}
+#ah-admin-banner{
+    display: none;
+}
+
+.ah-admin-form-control{
+    width: 100%;
+    height: 3.5rem;
+    padding: 0.625rem 1rem;
+    align-items: center;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-Stroke);
+    margin-bottom: 1.5rem;
+}
+
+.ah-note{
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.375rem;
+}
+
+.ah-login-banner img{
+    display: none;
+}
+
+.ah-login-form{
+    margin-top: 6rem
+}
+
+#ah-banner{
+    position: fixed;
+    height: 96px;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@media screen and (min-width: 700px) {
+
+    #ah-banner{
+        position: fixed;
+        height: 96px;
+        width: 50%;
+        text-align: left;
+        background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+        padding: 2rem 5rem;;
+    }
+    .ah-flex{
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+        padding-top: 0;
+    }
+
+    .ah-flex > * {
+        flex: 1 1 0;
+    }
+
+    .ah-admin-container{
+        position: relative;
+        height: 50%;
+    }
+
+    footer{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index:1;
+    }
+   
+    .ah-login-banner img{
+        height: 95vh;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .ah-button-div{
+        text-align: right;
+    }
+
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      .ah-login-form{
+        position: relative;
+
+      }
+}

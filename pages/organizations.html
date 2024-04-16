@@ -1,0 +1,188 @@
+<html>
+<head>
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge'/>
+    <meta charset='UTF-8'>
+    <title>Organizations | AniHelp</title>
+    <link rel="icon" type="image/x-icon" href="../assets/logo-favicon.svg">
+    <meta name='viewport'
+          content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'/>
+
+    <style>
+        .marker-icon {
+            background-position: center;
+            background-size: 22px 22px;
+            border-radius: 50%;
+            height: 22px;
+            left: 4px;
+            position: absolute;
+            text-align: center;
+            top: 3px;
+            transform: rotate(45deg);
+            width: 22px;
+        }
+        .marker {
+            height: 30px;
+            width: 30px;
+        }
+        .marker-content {
+            background: #c30b82;
+            border-radius: 50% 50% 50% 0;
+            height: 30px;
+            left: 50%;
+            margin: -15px 0 0 -15px;
+            position: absolute;
+            top: 50%;
+            transform: rotate(-45deg);
+            width: 30px;
+        }
+        .marker-content::before {
+            background: #ffffff;
+            border-radius: 50%;
+            content: "";
+            height: 24px;
+            margin: 3px 0 0 3px;
+            position: absolute;
+            width: 24px;
+        }
+        #exploremap{
+            /* width: 90%; */
+            height: 75vh;
+            
+        }
+        .explore{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            /* grid-template-columns: 1fr 1fr; */
+        }
+
+        #maplist{
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x:auto;
+        }
+        /* .report-card{
+        
+        } */
+
+    </style>
+    <script src='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps-web.min.js'></script>
+    <script type='text/javascript' src='../js/mobile-or-tablet.js'></script>
+    <script type='text/javascript' src='../js/formatters.js'></script>
+    <script src="../js/organizations.js" type="module" defer></script>
+    <script src="../js/nav.js" type="module" defer></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.25.0/maps/maps.css'>
+    <link rel='stylesheet' type='text/css' href='../css/style.css'>
+    
+    
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="../">AniHelp</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/explore.html">Explore</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Account
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item logged-in" href="#" id="usergreeting"></a>
+                                <a class="dropdown-item logged-out" href="#" id="googlesigninlink">Sign In</a>
+                                <a class="dropdown-item logged-out" data-bs-toggle="modal" data-bs-target="#loginModal" id="loginlink">Login</a>
+                                <a class="dropdown-item logged-out" hidden ="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                                <a class="nav-link logged-out" hidden href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+                                <a class="dropdown-item" href="./myreports.html">My Reports</a>
+                                <a class="dropdown-item logged-in" href="#" id="logoutlink">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="login-form">
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="email@example.com" aria-label="Email" name="login-email" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="password" aria-label="Password" name="login-password" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <p class="error"></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+
+        <!-- Signup Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="signupModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="signup-form">
+                        <div class="modal-body">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="username" aria-label="Username" name="signup-username" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="email@example.com" aria-label="Email" name="signup-email" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" placeholder="password" aria-label="Password" name="signup-password" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" placeholder="confirm password" aria-label="ConfirmPassword" name="signup-confirmpassword" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <p class="error"></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop fade show" id="backdrop" style="display: none;"></div>
+    </header>
+    
+    <div class="container">
+        <div class="explore">
+            <div id='exploremap' class='map'></div>
+            <div id="maplist" class="cards-wrapper" ></div>
+        </div>
+    </div>
+</body>
+</html>

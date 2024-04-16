@@ -1,0 +1,364 @@
+@import url("./style.css");
+
+/*-----------------------------------------------------------------------------
+GLOBAL DEFINITIONS
+-----------------------------------------------------------------------------*/
+:root {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+/*-----------------------------------------------------------------------------
+MAIN
+-----------------------------------------------------------------------------*/
+main {
+    padding: 24px;
+}
+
+h2 {
+    color: var(--color-Black);
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px;
+    /* 131.25% */
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.ah-container {
+    max-width: 750px;
+    width: 100%;
+    margin: auto;
+    
+}
+
+/*-----------------------------------------------------------------------------
+FORM
+-----------------------------------------------------------------------------*/
+
+/* --------------------- Form: Labels  */
+form label {
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    margin-bottom: 12px;
+}
+
+form select, form input, form textarea {
+    width: 100%;
+    padding: 14px 16px 15px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-Stroke);
+    margin-bottom: 25px;
+    
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    text-transform: capitalize;
+}
+
+/* --------------------- Photo options  */
+.ah-photo-options {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 10px;
+    max-width: 750px;
+    grid-column: 2/3;
+}
+
+.ah-photo-options button, .ah-photo-options input {
+    background-color: var(--color-Secondary);
+    border: 1px solid var(--color-Secondary);
+}
+
+/* --------------------- Form: Map  */
+
+.map {
+    border-radius: 30px;
+    width: 100%;
+    height: 500px;
+    grid-column: 2;
+    grid-row: 6;
+    margin-bottom: 30px;
+
+}
+
+.tt-search-box{
+    width: 200px;
+    height: 100%;
+    transition: width 0.3s; 
+}
+.tt-search-box-input-container .tt-search-box-input{
+    margin: 0;
+    padding: 0;
+    height: 20px;
+    width: 500px;
+}
+.tt-search-box:focus{
+    width: 500px !important;
+    
+}
+
+.tt-search-box-input:focus{
+    width: 500px !important;
+    
+} 
+/* .map > * {
+    width: 100%;
+} */
+
+/* --------------------- Form: Buttons  */
+.ah-btn {
+    border: 1px solid var(--color-Primary);
+    border-radius: 30px;
+    padding: 16px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 200% */
+}
+
+.ah-btn-primary {
+    background-color: var(--color-Primary);
+    color: var(--color-White);
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+
+.ah-btn-secondary {
+    background-color: transparent;
+    color: var(--color-Primary);
+}
+
+#stop_camera, #snap, #start_camera {
+    width: 30%;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 10px;
+   
+}
+
+#stop_camera:not(:disabled), #snap:not(:disabled) {
+    
+
+  
+    background-color: var(--color-Secondary); 
+    color: var(--color-Primary);
+}
+
+/* #stop_camera:not(:disabled):hover, #snap:not(:disabled):hover,#start_camera:not(:disabled):hover {
+    transform: scale(1.1);
+} */
+
+
+#start_camera:not(:disabled) {
+    background-color: var(--color-Secondary);
+    color: var(--color-Primary);
+    
+}
+
+#addPhoto:not(:disabled) {
+    padding: 15px;
+    height: 60px;
+    color: var(--color-Primary);
+}
+
+/* Disabled Styles */
+#stop_camera:disabled, #snap:disabled, #start_camera:disabled, #addPhoto:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.photo-options{
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+}
+
+.photo-options button{
+    margin-top: 6px;
+    width: 150px;
+    height: 2.5rem;
+    background-color: var(--color-Primary);
+    color: white;
+    border-radius: 10px;
+}
+#useButton{
+    margin-right: 10px;
+
+}
+#camera{
+    margin: 20px 0;
+}
+
+.ah-photo-upload{
+    grid-column: 2/3;
+    grid-row: 1;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#imageGalery {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 10px;
+    gap: 5px;
+    grid-column: 1/3;
+    width: 100%;
+  }
+
+.snap-photo-div {
+    position: relative;
+    display: inline-block;
+  }
+  
+.delete-button {
+position: absolute;
+top: 5px;
+right: 5px;
+background: none;
+border: none;
+font-size: 12px;
+cursor: pointer;
+color: black; 
+}
+
+
+
+#description{
+    text-transform: none;
+}
+.radio-container{
+    display: grid;
+    grid-template-columns: 60px 50px;
+    grid-column: 2;
+    margin-bottom: 20px;
+}
+.radio-container input,.radio-container label{
+    display: inline;
+    margin-bottom: 10px;
+ 
+}
+.radio-container input[type="radio"]{
+    width: 15px;
+}
+
+.ah-photo-options {
+    display: grid;
+    grid-template-rows: 120px 1fr; /* Set a fixed height for each row */
+    gap: 10px;
+  
+}
+
+.ah-photo-upload {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 3;
+}
+
+/* Your base styles here */
+
+
+.ah-photo-camera {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 3;
+}  
+
+#fileOrPhoto{
+    text-align: center;
+}
+
+.labelAlignRight{
+    font-weight: bold;
+}
+
+@media screen and (min-width: 740px) { 
+    /* .ah-photo-upload {
+        grid-column: 2;
+        
+    } */
+    
+    /* .ah-photo-camera {
+       grid-row: 1;
+        grid-column: 1;
+        
+    } */
+    
+.ah-buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+#submitBtn{
+    grid-column: 2;
+    height: 50px;
+    padding: 0;
+    
+}
+#cancelBtn{
+    grid-column: 1;
+    grid-row: 1;
+    height: 50px;
+    width: 90%;
+    padding: 0;
+}
+
+#submitBtn:hover , #cancelBtn:hover{
+    transform: scale(1.1);
+}
+.labelAlignRight{
+    text-align: right;
+    margin-right: 20px;
+}
+#userForm {
+    display: grid;
+    grid-template-columns: 0.9fr 3.2fr; /* Adjust the column widths as needed */
+}
+
+#userForm label {
+    grid-column: 1; /* Set to the desired column number */
+    margin-bottom: 5px; /* Optional: Add margin for spacing */
+   
+}
+
+#animalClass,
+#animalType,
+#description,
+#date,
+#time,
+#username,
+#phone {
+    grid-column: 2; /* Set to the desired column number */
+}
+
+.ah-buttons{
+    grid-column: 2;
+}
+    
+#animalTypeDiv{
+    grid-column: 2;
+}
+    
+}
+

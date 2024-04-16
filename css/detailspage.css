@@ -1,0 +1,197 @@
+@import url("./style.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+    min-height:100vh;
+    position:relative;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1.75rem 0;
+    overflow-wrap: break-word;
+}
+
+h4{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+label {
+    font-weight: 700;
+}
+
+#divstatusReport{
+    width: 100%;
+}
+.ah-dropdown{
+    width: 100%;
+    height: 3.5rem;
+    padding: 0.625rem 1rem;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid var(--color-Stroke);
+    background: var(--color-White);
+    margin-bottom: 2rem;
+}
+
+.ah-active-btn{
+    width: 100%;
+    height: 3.5rem;
+    padding: 1rem 4.5rem;
+    border-radius: 1.875rem;
+    background: var(--color-Primary);
+    color: var(--color-White);
+    margin-bottom: 2rem;
+}
+
+.ah-active-btn:disabled{
+  border: 1px solid #999999;
+  background-color: var(--color-Disabled);
+  color: var(--color-White);
+}
+
+.ah-secondary-btn{
+    width: 100%;
+    height: 3.5rem;
+    padding: 1rem 4.5rem;
+    border-radius: 1.875rem;
+    background: var(--color-White);
+    border: 0.0625rem solid var(--color-Primary);
+    color: var(--color-Primary);
+    margin-bottom: 2rem;
+}
+
+.reportdetailsdiv{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0.1rem 0;
+}
+
+.reportdetails{
+    font-size: 1.25rem;
+}
+
+.reporterdetails{
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+.ah-flex-item{
+    width: 20rem;
+}
+
+.ah-carousel{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    overflow:hidden;
+    border-radius: 1rem;
+}
+
+.ah-carousel img{
+    height: 20rem;
+    object-fit: fill;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color:  var(--color-White);
+    background-color: var(--color-Primary);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 1rem 1rem 0;
+    user-select: none;
+    text-decoration: none;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 1rem 0 0 1rem;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+    color: var(--color-Primary);
+    background-color: var(--color-White);
+}
+
+
+#map{
+    width: 100%;
+    height: 18rem;
+    border-radius: 1rem;
+}
+.ah-flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 10rem 0;
+
+}
+
+#childReports{
+    margin-top: 3rem;
+}
+
+#childReports .ah-flex{
+    padding: 2rem 0;
+}
+
+#childReports h3{
+    border-top: var(--color-Stroke) 1px solid;
+    padding: 2rem 0;
+}
+
+@media screen and (min-width: 700px) {
+    .ah-carousel{
+        width: 42rem;
+        height: 42rem;
+    }
+    .ah-flex-item{
+        width: 42rem;
+    }
+
+    .ah-carousel img{
+        height: 42rem;
+        object-fit: fill;
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+    .ah-flex{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .ah-carousel{
+        width: 42rem;
+      
+    }
+    .ah-flex-item{
+        width: 42rem;
+    }
+
+    .ah-carousel img{
+        height: 42rem;
+        object-fit: fill;
+    }
+}
+
+
+footer{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    bottom: 0;
+}

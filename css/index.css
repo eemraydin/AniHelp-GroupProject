@@ -1,0 +1,438 @@
+@import url("./style.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* GLOBAL DEFINITIONS */
+:root {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+ 
+  margin: auto;
+  padding: 0 ;
+}
+
+.ah-container footer {
+  max-width: 1200px;
+  margin: auto !important;
+}
+
+
+/* Media Query for Small Screens */
+
+  /* Hide Text */
+  .mobile-hide {
+    visibility: inherit;
+    display: none;
+  }
+
+  /* MAIN - class="ah-intructions" */
+  .ah-intructions {
+    width: 100%;
+    max-width: 381px;
+    height: 66px;
+    margin: auto;
+    text-align: center;
+    top: 20%;
+    border-radius: 16px;
+    border: 1px solid var(--Accent-Red, #AE2E30);
+    background: #FEF1F2;
+    color: var(--Accent-Red, #AE2E30);
+  }
+
+  .ah-p-intrictions {
+    margin-top: 1rem;
+  }
+
+  /* MAIN - class="ah-reportOptions" */
+  .ah-reportOptions {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border-radius: 30px;
+    background: var(--Secondary-Blue, #E6F1FB);
+    margin-top: 24px;
+    overflow-y: hidden; 
+  }
+
+  .ah-reportOptions img {
+    width: 178px;
+    height: 174px;
+    margin-top: 1rem;
+  }
+
+  .ah-reportOptions a {
+    margin-bottom: 1rem;
+  }
+
+  .ah-btn-createreport {
+    display: block;
+    width: 305px; 
+    padding: 12px 24px;
+    margin: 0.8rem auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    color: white;
+    background: var(--Primary, #09579F);
+    text-decoration: none;
+  }
+
+  /* MAIN - class="ah-emergencyCall" */
+  .ah-emergencyCall {
+    display: grid;
+    grid-template-rows: 1.25fr 1fr;
+    width: 100%;
+
+
+    margin: auto;
+    border-radius: 24px;
+    background: var(--Secondary-Blue, #E6F1FB);
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    
+  }
+
+  .ah-emergencyCallp1{
+
+    font-size: 1rem;
+     margin-top: 20px;
+     text-align: center;
+   }
+
+
+  .ah-btn-emergency {
+    display: block;
+    width: 305px; 
+    padding: 12px 24px;
+    margin: 0 auto 1rem auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    border: 1px solid var(--Primary, #09579F);
+    background: var(--White, #FFF);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.125rem;
+  }
+
+  /* MAIN - class="ah-explore" */
+  .map {
+    grid-column: 1;
+    grid-row: 1;
+    width: 580px;
+    height: 504px;
+  }
+  
+  #maplist {
+    grid-column: 2;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: nowrap; /* Ensure the items stay in a single row */
+    gap: 16px; /* Adjust the gap between cards */
+  }
+  
+  .mapContainer {
+    margin-top: 0 !important;
+ 
+    }
+    
+    
+  #ah-explore {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto; /* Three columns: left, center, right */
+    align-items: center;
+  }
+
+  .ah-p-explore {
+    color: var(--Black, var(--Filled-Text, #000));
+    text-align: left;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ah-p-explore2 {
+    color: var(--Black, var(--Filled-Text, #000));
+    text-align: left;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+    grid-column: 1;
+  }
+
+  .ah-p-reported-animals {
+    color: var(--Black, var(--Filled-Text, #000));
+    text-align: left;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+  }
+
+  #viewAll {
+    font-size: 20px;
+    text-align: right;
+    padding-bottom: 20px;
+    padding-right: 50px; /* Adjust the margin as needed */
+    grid-row: span 1;
+      grid-column: span 1;
+  }
+
+  /* MAIN - class="animalViewDetails" */
+  .ah-animalViewDetails {
+    width: 100%;
+    max-width: 381px;
+    height: 387px;
+    margin: auto;
+    border-radius: 30px;
+    background: var(--Secondary-Blue, #1477d3);
+    margin-top: 24px;
+  }
+
+  .ah-animalViewDetails a {
+    width: 100%;
+    max-width: 305px;
+    height: 48px;
+    padding: 16px 32px;
+    border-radius: 24px;
+    border: 1px solid var(--Primary, #09579F);
+    background: var(--White, #FFF);
+    max-width: 80%;
+  }
+
+.ah-emergencyCallp1{
+  padding: 0 5rem;
+}
+
+/* Media Query for Large Screens */
+@media screen and (min-width: 800px) {
+
+    .containermain {
+      width: 100%;
+      max-width: 1200px;
+      display: block;
+      margin: auto;
+    }
+
+    /* MAIN - class="ah-intructions" */
+    .ah-intructions {
+      width: 500px;
+      height: 66px;
+      margin: auto;
+      text-align: center;
+      border-radius: 16px;
+      border: 1px solid var(--Accent-Red, #AE2E30);
+      background: #FEF1F2;
+      color: var(--Accent-Red, #AE2E30);
+    }
+
+    .ah-p-intrictions {
+      margin-top: 1rem;
+    }
+
+    /* MAIN - class="ah-reportOptions" */
+    .ah-reportOptions {
+      width: 100%;
+      max-width: 1170px;
+      margin: auto;
+      text-align: center;
+      border-radius: 30px;
+      background: var(--Secondary-Blue, #E6F1FB);
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 0.6fr 1fr;
+      margin-bottom: 30px;
+      align-content: center;
+      padding: 20px;
+      overflow-x: hidden; 
+    }
+
+    .ah-reportOptions-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      width: 100%;
+      padding-right: 2.5rem;
+      font-size: 1.125rem;
+    }
+
+    .mobile-hide {
+      display: block;
+      width: 90%;
+      font-weight:600;
+      font-size: 1.5rem; /* Adjust the font size as needed */
+      text-align: right;
+      margin-top: 50px;
+    }
+    .right-side-report{
+      margin-top: 40px;
+      font-size: 1.125rem;
+      line-height: 36px
+    }
+
+    .ah-reportOptions img {
+      width: 100%;
+      height: 340px;
+      object-fit:contain;
+      margin-top: 1rem;
+    }
+
+    /* MAIN - class="ah-emergencyCall" */
+    .ah-emergencyCall {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      width: 100%;
+      max-width: 1170px;
+      margin: auto;
+      border-radius: 24px;
+      background: var(--Secondary-Blue, #E6F1FB);
+      margin-top: 24px;
+      margin-bottom: 24px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .ah-emergencyCallp1{
+      margin: auto;
+      font-size: 1.125rem;
+      margin-top: 20px;
+      text-align: center;
+      padding: 0;
+    }
+
+    .ah-btn-emergency {
+      margin-right: 40px;
+      height: 50px;
+    }
+
+    /* MAIN - class="ah-explore" */
+    #ah-explore {
+      width: 100%;
+      max-width: 1170px;
+      /* height: 100px; */
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    #ah-explore a {
+      margin-left: 7.5rem;
+    }
+
+
+    .ah-p-explore {
+      color: var(--Black, var(--Filled-Text, #000));
+      text-align: left;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ah-p-explore2 {
+      color: var(--Black, var(--Filled-Text, #000));
+      text-align: left;
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Lato;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      text-transform: capitalize;
+    }
+
+    .ah-explore {
+      display: flex;
+      width: 71px;
+      height: 31px;
+      padding: 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .viewAll{
+      padding-top: 20px;
+      font-size: 20px;
+      text-align: right;
+      
+    }
+
+    /* MAIN - class="MAP CONTAINER" */
+    .map {
+      max-height: 530px;
+      max-width: 580px;
+      grid-column: 1;
+      grid-row: 1;
+  
+    }
+    .report-card{
+      min-height: 530px;
+      margin: 0;
+      /* max-width: 270px !important; */
+    }
+
+    #maplist {
+      border-radius: 10px;
+      min-height: 530px;
+      grid-column: 2;  
+      padding-left: 10px;
+    }
+    .mapContainer {
+    
+      max-width: 1170px;
+      margin: auto;
+    
+      margin-top: 0 !important;
+    }
+
+    /* MAIN - class="animalViewDetails" */
+    .ah-animalViewDetails {
+      width: 100%;
+      max-width: 381px;
+      height: 387px;
+      margin: auto;
+      border-radius: 30px;
+      background: var(--Secondary-Blue, #1477d3);
+      margin-top: 24px;
+    }
+
+    .ah-animalViewDetails a {
+      width: 100%;
+      max-width: 305px;
+      height: 48px;
+      padding: 16px 32px;
+      border-radius: 24px;
+      border: 1px solid var(--Primary, #09579F);
+      background: var(--White, #FFF);
+      max-width: 80%;
+    }
+
+}

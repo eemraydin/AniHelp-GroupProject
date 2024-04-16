@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oops! | AniHelp</title>
+  <link rel="icon" type="image/x-icon" href="../assets/logo-favicon.svg">
+  <link rel="stylesheet" type="text/css" href="./css/custombootstrap.css">
+
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/offline.css">
+  <script type='text/javascript' src='./js/mobile-or-tablet.js'></script>
+  <script type='text/javascript' src='./js/formatters.js'></script>
+  <script src="./js/explore.js" type="module" defer></script>
+  <script src="./js/nav.js" type="module" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"
+      defer></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">AniHelp</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ah-navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav ah-navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <ul class="navbar-nav ah-navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link ah-nav-link" href="./explore.html">
+                <svg id="explore-icon" class="ah-nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM6.5 17.5L14.01 14.01L17.5 6.5L9.99 9.99L6.5 17.5ZM12 10.9C12.61 10.9 13.1 11.39 13.1 12C13.1 12.61 12.61 13.1 12 13.1C11.39 13.1 10.9 12.61 10.9 12C10.9 11.39 11.39 10.9 12 10.9Z"
+                    fill="#09579F" stroke="#09579F" stroke-width="0.25" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                Explore
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ah-navbar-nav ">
+            <li class="nav-item dropdown">
+              <a class="nav-link ah-nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg class="ah-nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.982 18.7247C17.2833 17.7996 16.3793 17.0493 15.3412 16.5331C14.3031 16.0168 13.1594 15.7487 12 15.7497C10.8407 15.7487 9.6969 16.0168 8.65883 16.5331C7.62077 17.0493 6.71675 17.7996 6.01801 18.7247M17.982 18.7247C19.3455 17.5119 20.3071 15.9133 20.7412 14.1408C21.1753 12.3683 21.0603 10.5058 20.4115 8.80018C19.7627 7.09457 18.6107 5.62648 17.1084 4.5906C15.6061 3.55472 13.8244 3 11.9995 3C10.1747 3 8.39295 3.55472 6.89062 4.5906C5.38829 5.62648 4.23634 7.09457 3.58755 8.80018C2.93875 10.5058 2.82376 12.3683 3.25783 14.1408C3.6919 15.9133 4.65451 17.5119 6.01801 18.7247M17.982 18.7247C16.336 20.1929 14.2056 21.0028 12 20.9997C9.79404 21.0031 7.66425 20.1931 6.01801 18.7247M15 9.74971C15 10.5454 14.6839 11.3084 14.1213 11.871C13.5587 12.4336 12.7957 12.7497 12 12.7497C11.2044 12.7497 10.4413 12.4336 9.87869 11.871C9.31608 11.3084 9.00001 10.5454 9.00001 9.74971C9.00001 8.95406 9.31608 8.19099 9.87869 7.62838C10.4413 7.06578 11.2044 6.74971 12 6.74971C12.7957 6.74971 13.5587 7.06578 14.1213 7.62838C14.6839 8.19099 15 8.95406 15 9.74971Z"
+                    stroke="#09579F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Account
+              </a>
+              <div class="dropdown-menu dropdown-menu-end ah-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item ah-dropdown-item logged-in" id="usergreeting"></a>
+                <a class="ah-nav-link dropdown-item ah-dropdown-item logged-out" id="googlesigninlink">
+                  <svg class="ah-nav-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none">
+                    <path
+                      d="M15.75 9V5.25C15.75 4.65326 15.5129 4.08097 15.091 3.65901C14.669 3.23705 14.0967 3 13.5 3H7.5C6.90326 3 6.33097 3.23705 5.90901 3.65901C5.48705 4.08097 5.25 4.65326 5.25 5.25V18.75C5.25 19.3467 5.48705 19.919 5.90901 20.341C6.33097 20.7629 6.90326 21 7.5 21H13.5C14.0967 21 14.669 20.7629 15.091 20.341C15.5129 19.919 15.75 19.3467 15.75 18.75V15M18.75 15L21.75 12M21.75 12L18.75 9M21.75 12H9"
+                      stroke="#09579F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Sign In</a>
+                <a class="dropdown-item ah-dropdown-item logged-in" href="./myreports.html">My Reports</a>
+
+                <a class="ah-nav-link dropdown-item ah-dropdown-item logged-in" id="logoutlink">
+                  <svg class="ah-nav-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20"
+                    fill="none">
+                    <path
+                      d="M11.75 7V3.25C11.75 2.65326 11.5129 2.08097 11.091 1.65901C10.669 1.23705 10.0967 1 9.5 1H3.5C2.90326 1 2.33097 1.23705 1.90901 1.65901C1.48705 2.08097 1.25 2.65326 1.25 3.25V16.75C1.25 17.3467 1.48705 17.919 1.90901 18.341C2.33097 18.7629 2.90326 19 3.5 19H9.5C10.0967 19 10.669 18.7629 11.091 18.341C11.5129 17.919 11.75 17.3467 11.75 16.75V13M8 7L5 10M5 10L8 13M5 10H17.75"
+                      stroke="#09579F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Sign Out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="login-form">
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="email@example.com" aria-label="Email"
+                  name="login-email" required>
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="password" aria-label="Password"
+                  name="login-password" required>
+              </div>
+              <div class="input-group mb-3">
+                <p class="error"></p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Log In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="signupModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="signup-form">
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="username" aria-label="Username"
+                  name="signup-username" required>
+              </div>
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="email@example.com" aria-label="Email"
+                  name="signup-email" required>
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="password" aria-label="Password"
+                  name="signup-password" required>
+              </div>
+              <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="confirm password" aria-label="ConfirmPassword"
+                  name="signup-confirmpassword" required>
+              </div>
+              <div class="input-group mb-3">
+                <p class="error"></p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal-backdrop fade show" id="backdrop" style="display: none;"></div>
+  </header>
+  <main>
+
+    <h1>Oops! You're Currently Offline</h1>
+    <div class="ah-offline-img">
+      <img src="./assets/offline.jpeg" alt="Dog laying dog looking sad">
+    </div>
+    <div class="ah-offline-message">
+      <p>Please try refreshing the page or check our explore page while you wait to reconnect</p>
+      <label for="refreshBtn"><button type="button" class="refresh" id="refreshBtn">Refresh</button></label>
+    </div>
+  </main>
+</body>
+
+</html>

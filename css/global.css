@@ -1,0 +1,237 @@
+/**********************************************************************************
+Components page
+**********************************************************************************/
+#ah-heading-mobile {
+    display: block;
+}
+
+#ah-heading-desktop {
+    display: none;
+}
+
+/**********************************************************************************
+Global variables
+**********************************************************************************/
+:root {
+    /****************Colors****************/
+
+    --color-Primary: #09579F;
+    --color-Secondary: #E6F1FB;
+    --color-Tertiary: #01767E;
+    --color-Black: #000000;
+    --color-White: #FFFFFF;
+    --color-Stroke: #AFB1B6;
+    --color-Disabled: #A0A1A2;
+    --color-Placeholder: #ABACAE;
+    --color-Accent: #2D7A50;
+    --color-Red: #AE2E30;
+    --color-TableRow1: #EEF4F9;
+    --color-TableRow2: #F3F3F3;
+    --color-TableHeader: #D9D9D9;
+
+    /****************Fontfamily****************/
+
+    --fontFamily: 'Lato', sans-serif;
+
+    /****************Buttons****************/
+
+    --textAlign-Btn: center;
+
+    /****************Buttons mobile****************/
+
+    --padding-Btn-Mobile: 16px;
+    --borderRadius-Btn-Mobile: 24px;
+    --fontSize-Btn-Mobile: 16px;
+    --fontStyle-Btn-Mobile: normal;
+    --fontWeight-Btn-Mobile: 400;
+    --lineHeight-Btn-Mobile: 0;
+    --height-Btn-Mobile: 48px;
+    --width-Btn-Mobile: 100%;
+    
+    /****************Buttons desktop****************/
+    
+    --padding-Btn-Desktop: 16px;
+    --borderRadius-Btn-Desktop: 30px;
+    --fontSize-Btn-Desktop: 18px;
+    --fontStyle-Btn-Desktop: normal;
+    --fontWeight-Btn-Desktop: 500;
+    --lineHeight-Btn-Desktop: 0;
+    --height-Btn-Desktop: 48px;
+    --width-Btn-Desktop: 305px;
+
+    /****************Links****************/
+    --textDecoration-Link: none;
+    --textDecorationLine-Link: underline;
+
+    /****************Links desktop****************/
+    --fontSize-Link-Desktop: 20px;
+    --fontStyle-Link-Desktop: normal;
+    --fontWeight-Link-Desktop: 700;
+    --lineHeight-Link-Desktop: 32px;
+
+    /****************Links mobile****************/
+    --fontSize-Link-Mobile: 20px;
+    --fontStyle-Link-Mobile: normal;
+    --fontWeight-Link-Mobile: 700;
+    --lineHeight-Link-Mobile: 32px;
+
+    /****************Forms****************/
+    --padding-Form-Mobile: 20px;
+    --width-Form-Mobile: 100%;
+    
+    /****************Labels****************/
+    --display-Label-Mobile: block;
+    --fontSize-Label-Mobile: 18px;
+    --fontStyle-Label-Mobile: normal;
+    --fontWeight-Label-Mobile: 26px;
+    --padding-Label-Mobile: 0;
+    --textTransform-Label-Mobile: capitalize;
+    --width-Label-Mobile: 100%;
+
+    /****************Form controls****************/
+    --borderRadius-FormControl-Mobile: 4px;
+    --border-FormControl-Mobile: 1px solid var(--color-Stroke);
+    --display-FormControl-Mobile: block;
+    --margin-FormControl-Mobile: 16px 0 20px 0;
+    --fontFamily-FormControl-Mobile: var(var(--fontFamily));
+    --fontSize-FormControl-Mobile: 16px;
+    --fontStyle-FormControl-Mobile: normal;
+    --fontWeight-FormControl-Mobile: 400;
+    --padding-FormControl-Mobile: 10px 16px;
+    --textTransform-FormControl-Mobile: capitalize;
+    --width-FormControl-Mobile: 100%;
+
+}
+
+/**********************************************************************************
+Fonts
+**********************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    font-family: var(--fontFamily);
+}
+
+/**********************************************************************************
+Buttons
+**********************************************************************************/
+
+.ah-btn {
+    border-radius: var(--borderRadius-Btn-Mobile);
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize-Btn-Mobile);
+    font-style: var(--fontStyle-Btn-Mobile);
+    font-weight: var(--fontWeight-Btn-Mobile);
+    height: var(--height-Btn-Mobile);
+    line-height: var(--lineHeight-Btn-Mobile);
+    padding: var(--padding-Btn-Mobile);
+    text-align: var(--textAlign-Btn);
+    width: var(--width-Btn-Mobile);
+}
+
+.ah-btn-primary {
+    background-color: var(--color-Primary);
+    border: 1px solid var(--color-Primary);
+    color: var(--color-White);
+}
+
+.ah-btn-secondary {
+    background-color: var(--color-White);
+    border: 1px solid var(--color-Primary);
+    color: var(--color-Primary);
+}
+
+.ah-btn-tertiary {
+    background-color: var(--color-Disabled);
+    border: 1px solid var(--color-Disabled);
+    color: var(--color-White);
+}
+
+/**********************************************************************************
+Links
+**********************************************************************************/
+
+.ah-link {
+    color: var(--color-Primary);
+    font-size: var(--fontSize-Link-Mobile);
+    font-style: var(--fontStyle-Link-Mobile);
+    font-weight: var(--fontWeight-Link-Mobile);
+    line-height: var(--lineHeight-Link-Mobile);
+    text-decoration-line: var(--textDecorationLine-Link);
+}
+
+/**********************************************************************************
+Forms
+**********************************************************************************/
+.ah-form {
+    padding: var(--padding-Form-Mobile);
+}
+
+.ah-label {
+    display: var(--display-Label-Mobile);
+    font-size: var(--fontSize-Label-Mobile);
+    font-style: var(--fontStyle-Label-Mobile);
+    font-weight: var(--fontWeight-Label-Mobile);
+    padding: var(--padding-Label-Mobile);
+    text-transform: var(--textTransform-Label-Mobile);
+    width: var(--width-Label-Mobile);
+}
+
+.ah-form-control {
+    border-radius: var(--borderRadius-FormControl-Mobile);
+    border: var(--border-FormControl-Mobile);
+    display: var(--display-FormControl-Mobile);
+    margin: var(--margin-FormControl-Mobile);
+    font-family: var(--fontFamily-FormControl-Mobile);
+    font-style: var(--fontStyle-FormControl-Mobile);
+    font-weight: var(--fontWeight-FormControl-Mobile);
+    padding: var(--padding-FormControl-Mobile);
+    text-transform: var(--textTransform-FormControl-Mobile);
+    width: var(--width-FormControl-Mobile);
+}
+
+.successIcon {
+    clip-path: circle(50% at 50% 50%);
+    background: green;
+    width: 230px;
+    height: 230px;
+}
+
+@media screen and (min-width: 700px) {
+
+    #ah-heading-mobile {
+        display: none;
+    }
+
+    #ah-heading-desktop {
+        display: block  ;
+    }
+
+    .ah-btn {
+        border-radius: var(--borderRadius-Btn-Desktop);
+        font-size: var(--fontSize-Btn-Desktop);
+        font-style: var(--fontStyle-Btn-Desktop);
+        font-weight: var(--fontWeight-Btn-Desktop);
+        height: var(--height-Btn-Desktop);
+        line-height: var(--lineHeight-Btn-Desktop);
+        padding: var(--padding-Btn-Desktop);
+        width: var(--width-Btn-Desktop);
+    }
+
+    .ah-link {
+        font-size: var(--fontSize-Link-Desktop);
+        font-style: var(--fontStyle-Link-Desktop);
+        font-weight: var(--fontWeight-Link-Desktop);
+        line-height: var(--lineHeight-Link-Desktop);
+    }
+
+    .ah-label {
+        display: var(--display-Label-Desktop);
+        font-size: var(--fontSize-Label-Desktop);
+        font-style: var(--fontStyle-Label-Desktop);
+        font-weight: var(--fontWeight-Label-Desktop);
+        padding: var(--padding-Label-Desktop);
+        text-transform: var(--textTransform-Label-Desktop);
+        width: var(--width-Label-Desktop);
+    }
+}

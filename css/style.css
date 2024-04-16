@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+/**********************************************************************************
+Global variables
+**********************************************************************************/
+:root{
+    /****************Colors****************/
+    --color-Primary: #09579F;
+    --color-Secondary: #cbe1f5;
+    --color-Tertiary: #01767E;
+    --color-Black: #000000;
+    --color-White: #FFFFFF;
+    --color-Stroke: #AFB1B6;
+    --color-Disabled: #A0A1A2;
+    --color-Placeholder: #ABACAE;
+    --color-Accent: #2D7A50;
+    --color-Red: #AE2E30;
+    --color-TableRow1: #EEF4F9;
+    --color-TableRow2: #F3F3F3;
+    --color-TableHeader: #D9D9D9;
+    
+    /****************Status Colors****************/
+    
+
+    /****************Breakpoint****************/
+    --style-Breakpoint: 700px;
+
+
+    /****************Font size****************/
+
+
+    /****************Font weight****************/
+    --fontWeight-Regular: 400;
+    --fontWeight-Medium: 500;
+    --fontWeight-SemiBold: 600;
+    --fontWeight-Bold: 700;
+
+    --fontWeight-Heading1: var(--fontWeight-Bold);
+    --fontWeight-Heading2: var(--fontWeight-Bold);
+    --fontWeight-SubHeading1: var(--fontWeight-Bold);
+    --fontWeight-SubHeading2: var(--fontWeight-Bold);
+    --fontWeight-BodyText: var(--fontWeight-Medium);
+    --fontWeight-SmallBodyText: var(--fontWeight-Regular);
+    --fontWeight-Button: var(--fontWeight-SemiBold);
+    --fontWeight-Label: var(--fontWeight-Regular);
+}
+
+
+/**********************************************************************************
+Fonts
+**********************************************************************************/
+
+
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+}
+
+
+
+.card{
+    background-color:var(--color-PrimaryLight) ;
+}
+/**********************************************************************************
+Body
+**********************************************************************************/
+
+/* OFFLINE POPUP */
+#offlinePopup {
+    display: none;
+    position: fixed;
+    top: 80px; /* Adjust the top value to include the height of your header */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: auto;
+    border: 1px solid var(--Accent-Red, #AE2E30);
+    background: #FEF1F2;
+    color: var(--Accent-Red, #AE2E30);
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+    border-radius: 16px;
+    padding: 0.5rem;
+    z-index: 1000; /* Set a higher z-index to ensure it appears above other elements */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a box shadow for better visibility */
+}
+#offlinePopup p{
+margin-bottom: 0;
+}
+
+/**********************************************************************************
+Header and Nav
+**********************************************************************************/
+input,label,video,textarea{
+    display: block;
+}
+
+h1, nav, nav li {
+    display: inline-block;
+}
+
+.ah-nav-link{
+    white-space: nowrap;
+}
+
+.ah-nav-link:hover path{
+    stroke:black;
+}
+
+.ah-nav-link:hover #explore-icon path{
+    stroke:black;
+    fill: black;    
+}
+
+.navbar-nav .nav-link.show path{
+    stroke:black
+}
+
+.ah-nav-icon{
+    margin-right: 0.5rem;
+}
+
+.ah-navbar-nav .nav-item .ah-dropdown-menu{
+    background-color: #E6F1FB;
+    text-align: right;
+    border: none;
+    padding-right: 0.5rem;
+    padding-top: 0;
+    position:absolute;
+}
+
+.ah-dropdown-item {
+    color: var(--color-Primary);
+    font-weight: 700;
+    margin-top: 1rem;
+    width: 15rem;
+    white-space: wrap;
+}
+
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+.ah-navbar-collapse .ah-navbar-nav  {
+    flex-direction: row-reverse;
+}
+.ah-navbar-nav .nav-item{
+    width: 100px;
+    min-width: 0;
+}
+
+
+.navbar {
+    padding: 30px;
+}
+.navbar-brand {
+    color: var(--color-Primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    padding: 0;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-Primary);
+}
+
+.nav-link:first-of-type {
+    margin-right: 24px;
+}
+
+.navbar-nav {
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+}
+
+/**********************************************************************************
+Main
+**********************************************************************************/
+.ah-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#addPhoto{
+    padding: 0.4rem;
+    margin: 0;
+}
+
+main {
+    /* border: 1px solid black; */
+
+    padding: 1rem;
+    padding-top: 2rem;
+    margin: auto;
+   
+}
+label{
+    padding: 0.1rem;
+}
+
+#map{
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+    
+}
+
+table {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+/**********************************************************************************
+Map
+**********************************************************************************/
+
+.tt-popup {
+    padding-top: 7px;
+}
+.tt-search-box-input {
+    width: calc(100% - 40px); 
+}
+
+.map {
+    height: 100%;
+    position:relative;
+    width: 100%;
+    display: block;
+}
+
+.marker-icon {
+    background-position: center;
+    background-size: 22px 22px;
+    border-radius: 50%;
+    height: 22px;
+    left: 4px;
+    position: absolute;
+    text-align: center;
+    top: 3px;
+    transform: rotate(45deg);
+    width: 22px;
+}
+.marker {
+    height: 30px;
+    width: 30px;
+}
+.marker-content {
+    background: #c30b82;
+    border-radius: 50% 50% 50% 0;
+    height: 30px;
+    left: 50%;
+    margin: -15px 0 0 -15px;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg);
+    width: 30px;
+}
+.marker-content::before {
+    background: #ffffff;
+    border-radius: 50%;
+    content: "";
+    height: 24px;
+    margin: 3px 0 0 3px;
+    position: absolute;
+    width: 24px;
+}
+
+.full-map {
+    flex: 1;
+    height: 100vh;
+}
+
+
+  /*
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    border-width: 1px 1px 0;
+
+
+
+
+    background-color: #f7f7f7;
+  }
+  
+  .content {
+    margin: 20px;
+  }
+  */
+
+header .container {
+    padding: 0;
+}
+
+/**********************************************************************************
+        Icons
+**********************************************************************************/
+i[class$="-icon"]{
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    padding: 0.25rem 3rem;
+    font-style: normal;
+    height: 1.875rem;
+}
+
+.ah-call-icon{
+    background: url('../assets/call.svg');
+}
+
+.ah-location-icon{
+    background: url('../assets/location.svg');
+}
+
+
+.ah-open-icon{
+    background: url('../assets/open.svg');
+    color: var(--color-Tertiary);
+}
+
+.ah-inprogress-icon{
+    background: url('../assets/inProgress.svg');
+    color: var(--color-Primary);
+}
+
+.ah-cantfind-icon{
+    background: url('../assets/cantFind.svg');
+    color:var(--color-Red);
+}
+
+.ah-pickedup-icon{
+    background: url('../assets/pickedUp.svg');
+    color: var(--color-Accent);
+}
+
+.ah-deceased-icon{
+    background: url('../assets/dead.svg');
+    color: var(--color-Black);
+}
+
+.ah-saved-icon{
+    background: url('../assets/saved.svg');
+    color: var();
+}
+
+/**********************************************************************************
+            FOOTER
+**********************************************************************************/
+footer{
+    background-color: var(--Footer--Gray, #EEF4F9);
+    
+}
+
+.ah-footer-brand{
+    color: var(--color-Primary);
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.ah-logo{
+    display: flex;
+    align-items: center;
+    gap:0.25rem;
+}
+
+.ah-logo svg{
+    display: block;
+    height: 1.125rem;
+    gap:2rem;
+}
+
+.logouni{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+}
+
+.ah-footer{
+    height: 6rem;
+    display: flex;
+    align-items: center;    
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+}
+
+.ah-footer-copyright, .ah-footer-brand{
+    margin:0;
+    white-space: nowrap;
+}
+
+.ah-footer a{
+    color: var(--color-Primary);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {    
+    .ah-dropdown-menu{
+        border-radius: 8px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    .ah-dropdown-item {
+        margin-top: .5rem;
+    }
+    .ah-navbar-nav .nav-item{
+        width: 100%;
+     }
+    
+     .ah-footer{
+        flex-direction: row;
+        justify-content: space-between;
+     }
+}

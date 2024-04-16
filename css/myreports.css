@@ -1,0 +1,256 @@
+/* Default Styles (Mobile First) */
+
+/* Global Definitions */
+:root {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    position:relative;
+}
+
+/* Main */
+
+.ah-container {
+    max-width: 1200px;
+    margin: auto;
+}
+h2 {
+    color: var(--color-Black);
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.tableContainer {
+    
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 10rem;
+}
+
+/* Cards */
+
+
+thead {
+    display: none;
+}
+#tableStyle {
+    margin-top: 50px;
+    border: none;
+    margin: auto;
+    
+}
+#myReportsTable{
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+#myReportsTable tr {
+    width: 100%;
+    margin: 0 auto; /* Center the card on mobile */
+    border-radius: 10px;
+    border: 1px solid var(--color-Secondary);
+    background-color: var(--color-Secondary);
+    margin: 24px 0;
+    padding: 16px;
+    
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+
+/* Card Lines */
+#myReportsTable td {
+    border: none;
+    padding: 0;
+    margin-bottom: 10px;
+    width: 100%;
+   
+    align-self: center;
+    text-align: left;
+    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+
+#myReportsTable .ah-col-animal-type {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+#myReportsTable .ah-col-address::before,
+#myReportsTable .ah-col-date-and-time::before {
+    margin-right: 4px;
+}
+
+#myReportsTable .ah-col-description::before {
+    font-weight: 600;
+}
+
+#myReportsTable .ah-col-status {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+/* Status Icons and Text */
+#myReportsTable .status-open::before,
+#myReportsTable .status-picked-up::before,
+#myReportsTable .status-in-progress::before {
+    content: url(../assets/open.svg);
+    margin-right: 8px;
+    color: var(--color-Tertiary);
+}
+
+#myReportsTable .status-saved::before {
+    content: url(../assets/saved.svg);
+    margin-right: 8px;
+    color: var(--color-Accent);
+}
+
+#myReportsTable .status-cant-find::before {
+    content: url(../assets/cantFind.svg);
+    margin-right: 8px;
+    color: var(--color-Red);
+}
+
+#myReportsTable .deceased::before {
+    content: url(../assets/open.svg);
+    margin-right: 8px;
+    color: var(--color-Tertiary);
+}
+
+/* View Details Button */
+#myReportsTable tr {
+    position: relative;
+    height: 650px;
+}
+
+[id^="viewBtn"] {
+    position: absolute;
+    bottom: 15px;
+    background-color: var(--color-Primary);
+    text-decoration: none;
+    border: 1px solid var(--color-Primary);
+    padding: 16px;
+    text-align: center;
+    border-radius: 24px;
+    width: 90%;
+}
+
+[id^="viewBtn"] a {
+    text-decoration: none;
+    color: var(--color-White);
+    font-family: Lato;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+
+/* Pagination */
+.pagination {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-Primary);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+.pagination button:last-of-type {
+    margin-right: 0;
+}
+
+.hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px!important;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+}
+
+.pagination button.active {
+    background-color: var(--color-Primary);
+    color: var(--color-White);
+}
+
+.ah-col-buttons label {
+    width: 100%;
+}
+.ah-col-photo {
+    margin-top: 20px;
+    width: 300px;
+    max-height: 300px;
+}
+
+.ah-col-photo img {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%; /* Make the image fill the card width */
+}
+
+/* Larger Screens */
+@media screen and (min-width: 700px) {
+    #myReportsTable tr {
+        width: 100%; /* Adjust this width for larger screens */
+    }
+
+    tbody {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+    #myReportsTable tr {
+        margin: 0;
+    }
+}
+
+footer{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    bottom: 0;
+}

@@ -1,0 +1,14 @@
+{
+    "name": "AniHelp" ,
+    "short_name": "AniHelp " ,
+    "icons": [
+        {
+            "src": "assets/icon.png",  
+            "sizes": "250x250",
+            "type": "image/png",
+            "purpose": "any"
+        }],
+    "start_url": "index.html" ,
+    "display": "fullscreen"
+}
+    

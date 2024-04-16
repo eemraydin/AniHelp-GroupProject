@@ -1,0 +1,604 @@
+@import url("./style.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/*-----------------------------------------------------------------------------
+QUESTIONS
+-----------------------------------------------------------------------------*/
+/* 
+Search bar: when the person starts typing, does text change color? To what? 
+*/
+
+/*-----------------------------------------------------------------------------
+GLOBAL DEFINITIONS
+-----------------------------------------------------------------------------*/
+root {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    min-height:100vh;
+    position:relative;
+}
+
+
+/*-----------------------------------------------------------------------------
+MAIN
+-----------------------------------------------------------------------------*/
+
+main {
+    padding: 24px;
+}
+
+
+.ah-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    max-width: 1400px;
+
+}
+
+h2 {
+    color: var(--color-Black);
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 42px;
+    /* 131.25% */
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+/*-----------------------------------------------------------------------------
+MAIN SECTION - AH-SEARCH
+-----------------------------------------------------------------------------*/
+
+.ah-search label {
+    padding: 0;
+    display: inline-block;
+}
+
+.ah-search input {
+    color: var(--color-Placeholder);
+    font-feature-settings: 'clig'off, 'liga'off;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    text-transform: capitalize;
+    padding: 15px 16px 14px 16px;
+}
+
+#searchBar {
+    border-radius: 8px 0 0 8px;
+    border: 1px solid var(--color-Stroke);
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+#searchBtn {
+    border-radius: 0px 8px 8px 0px;
+    background: var(--color-Primary);
+    border: 1px solid var(--color-Primary);
+    color: var(--color-White);
+    text-align: center;
+    margin: 0;
+    width: 100px;
+    margin-bottom: 32px;
+}
+
+/*-----------------------------------------------------------------------------
+MAIN SECTION - AH-MERGE
+-----------------------------------------------------------------------------*/
+.ah-merge {
+    text-align: right;
+}
+
+#mergeBtn {
+    padding: 14px 16px;
+    border-radius: 30px;
+    border: 1px solid var(--color-Tertiary);
+    color: var(--color-Tertiary);
+    background-color: transparent;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 32px;
+}
+
+#mergeBtn:disabled {
+    border: 1px solid var(--color-Disabled);
+    background-color: var(--color-Disabled);
+    color: var(--color-White);
+}
+
+/*-----------------------------------------------------------------------------
+MAIN SECTION - AH-CONTENT (TABLE)
+-----------------------------------------------------------------------------*/
+.ah-content {
+    grid-column: 1 / -1;
+    overflow-x: scroll;
+    margin: 0 0 5rem 0;
+}
+
+table {
+    border: 1px solid var(--color-Stroke);
+    background-color: var(--color-White);
+    table-layout: fixed;
+}
+
+thead {
+    height: 58px;
+    padding: 13px 0 11px 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    /* 162.5% */
+}
+
+tbody {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+}
+
+tr:nth-of-type(even) {
+    border: 1px solid var(--color-Stroke);
+    background-color: var(--color-TableRow1);
+}
+
+tr:nth-of-type(odd) {
+    border: 1px solid var(--color-Stroke);
+    background-color: var(--color-TableRow2);
+}
+
+th, td {
+    padding: 11px 18px 4px 25px;
+}
+
+th{
+    background-color: var(--color-TableHeader);
+
+}
+
+/* --------------------- Column: Select checkbox  */
+
+.ah-col-select input {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color-Primary);
+}
+
+/* --------------------- Column: Status */
+
+.ah-col-status>select {
+    width: 100%;
+    min-width: 120px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    /* 200% */
+    text-transform: capitalize;
+    padding: 10px 12px;
+    color: var(--color-Placeholder);
+
+    border: 1px solid var(--color-Stroke);
+    border-radius: 8px;
+}
+
+/* --------------------- Column: Actions */
+
+.ah-col-buttons {
+    min-width: 170px;
+}
+
+.ah-col-buttons label {
+    display: inline-block;
+    padding: 0;
+}
+
+[id^="saveBtn"], [id^="viewBtn"] {
+    padding: 16px;
+    color: var(--color-Primary);
+    border: none;
+    background-color: transparent;
+    font-feature-settings: 'clig'off, 'liga'off;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    /* 160% */
+    text-decoration-line: underline;
+    display: inline-block;
+    width: 50%;
+    padding-left: 0;
+}
+
+/*-----------------------------------------------------------------------------
+PAGINATION
+-----------------------------------------------------------------------------*/
+.pagination {
+    margin-top: 48px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-Primary);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 120% */
+    text-transform: capitalize;
+}
+
+.pagination button:last-of-type {
+    margin-right: 0;
+}
+
+.hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.pagination button.active {
+    background-color: var(--color-Primary);
+    color: var(--color-White);
+}
+
+/*-----------------------------------------------------------------------------
+FOOTER
+-----------------------------------------------------------------------------*/
+footer{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    bottom: 0;
+}
+
+@media screen and (max-width: 700px) {
+
+    /*-----------------------------------------------------------------------------
+    MAIN
+    -----------------------------------------------------------------------------*/
+
+    .ah-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    h2 {
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .ah-merge {
+        order: 10;
+        flex-basis: 100%;
+        margin: 0 0 5rem 0;
+        
+    }
+
+    /*-----------------------------------------------------------------------------
+    MAIN SECTION - AH-SEARCH
+    -----------------------------------------------------------------------------*/
+    .ah-search {
+        width: 100%;
+    }
+
+    .ah-search form {
+        display: grid;
+        grid-template-columns: 8fr 2fr;
+        gap: 0;
+        margin: 27px 0;
+        width: 100%;
+    }
+
+    #searchBar, #searchBtn {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    /*-----------------------------------------------------------------------------
+    MAIN SECTION - AH-MERGE
+    -----------------------------------------------------------------------------*/
+    #mergeBtn {
+        width: 272px;
+        padding: 16px 0;
+        border-radius: 24px;
+        border: 1px solid var(--color-Primary);
+        background-color: var(--color-Primary);
+        color: var(--color-White);
+    }
+
+    /*-----------------------------------------------------------------------------
+    MAIN SECTION - AH-CONTENT (TABLE)
+    -----------------------------------------------------------------------------*/
+    .ah-content{
+        margin: 0;
+    }
+    /* --------------------- Table: Body and Head */
+    table {
+        border: none;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody {
+        padding: 0;
+
+    }
+
+    /* --------------------- Table: Rows */
+    #tableBody tr:first-of-type {
+        margin-top: 0;
+    }
+
+    #tableBody tr {
+        /* styles */
+        border-radius: 17px;
+        border: 1px solid var(--color-Secondary);
+        background-color: var(--color-Secondary);
+        margin: 24px 0;
+        padding: 24px 16px;
+
+        /* flex */
+
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+
+    /* --------------------- Table: Cells/Columns */
+    #tableBody td {
+        border: none;
+        padding: 0;
+        margin-bottom: 30px;
+        align-self: center;
+    }
+
+    #tableBody td:last-of-type {
+        margin-bottom: 0;
+    }
+
+    #tableBody td:nth-of-type(1) {
+        display: flex;
+        /*align the checkbox to the right*/
+        justify-content: flex-end;
+    }
+
+    .ah-table-column {
+        order: 10;
+        text-align: left;
+        font-feature-settings: 'clig'off, 'liga'off;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+        text-transform: capitalize;
+    }
+
+    /* --------------------- Column: ID */
+    .ah-col-id {
+        order: 1;
+        font-weight: bold;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36px;
+        /* 150% */
+        flex-basis: 80%;
+    }
+
+    .ah-col-id::before {
+        content: "ID "
+    }
+
+    /* --------------------- Column: Select checkbox  */
+
+    .ah-col-select {
+        order: 2;
+        flex-basis: 20%;
+    }
+
+    .ah-col-select input {
+        width: 24px;
+        height: 24px;
+        border: 1px solid var(--color-Stroke);
+    }
+
+    /* --------------------- Column: Animal Type */
+
+    .ah-col-animal-type {
+        order: 3;
+    }
+
+    .ah-col-animal-type::after {
+        content: "|";
+        margin-left: 0.5rem;
+    }
+
+    /* --------------------- Column: Animal Class */
+
+    .ah-col-animal-class {
+        order: 4;
+        padding-left: 5rem;
+        flex: 1 1 50%;
+        margin-left: 0.5rem;
+    }
+
+    /* --------------------- Column: Address */
+    #tableBody td:nth-of-type(3) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .ah-col-address {
+        order: 5;
+        flex-basis: 100%;
+    }
+
+    .ah-col-address::before {
+        content: url(../assets/location.svg);
+        margin-right: 8px;
+    }
+
+    /* --------------------- Column: Date and time */
+    #tableBody td:nth-of-type(4) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .ah-col-date-and-time {
+        order: 6;
+        flex-basis: 100%;
+    }
+
+
+    .ah-col-date-and-time::before {
+        content: url(../assets/calendar.svg);
+        margin-right: 8px;
+    }
+    /* --------------------- Column: Condition */
+    .ah-col-condition{
+        order: 7;
+    }
+
+    .ah-col-condition::before{
+        content: "Condition: ";
+    }
+
+    /* --------------------- Column: Description */
+    .ah-col-description {
+        order: 8;
+        flex-basis: 100%;
+    }
+
+    .ah-col-description::before {
+        content: "Description: ";
+    }
+
+    /* --------------------- Column: Status */
+    .ah-col-status {
+        order: 9;
+        flex-basis: 100%;
+    }
+
+    .ah-col-status>select {
+        width: 100%;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+        text-transform: capitalize;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    .ah-col-status::before {
+        content: "Status";
+    }
+
+    /* --------------------- Column: Actions */
+    .ah-col-buttons {
+        order: 10;
+        flex-basis: 100%;
+        margin-bottom: 0;
+    }
+
+    .ah-btn {
+        text-align: center;
+    }
+
+    .ah-col-buttons button,
+    .ah-col-buttons label {
+        width: 100%;
+    }
+
+    [id^="saveBtn"], #mergeBtn {
+        color: var(--color-White);
+        border: 1px solid var(--color-Primary);
+        background-color: var(--color-Primary);
+        border-radius: 30px;
+        line-height: 32px;
+        /* 200% */
+        display: inline-block;
+        width: 100%;
+        text-decoration-line: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    [id^="saveBtn"], [id^="viewBtn"] {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        padding: 16px;
+    }
+
+    [id^="viewBtn"]::after {
+        content: " Details"
+    }
+
+    /*-----------------------------------------------------------------------------
+    MAIN SECTION - MERGE
+    -----------------------------------------------------------------------------*/
+
+    #mergeBtn {
+        color: var(--color-White);
+        border: 1px solid var(--color-Primary);
+        background-color: var(--color-Primary);
+        border-radius: 30px;
+        line-height: 24px;
+        /* 200% */
+        display: inline-block;
+        width: 100%;
+        text-decoration-line: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    /*-----------------------------------------------------------------------------
+    PAGINATION
+    -----------------------------------------------------------------------------*/
+    .pagination {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+
+}
