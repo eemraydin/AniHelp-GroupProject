@@ -38,9 +38,11 @@ To view the website locally, follow these steps:
 
 2. Navigate to the project directory.
 
-3. Open the `index.html` file in your web browser.
+3. Update database API details with your firebase API
 
-4. You can now interact with the website locally in your browser.
+4. Open the `index.html` file in your web browser.
+
+5. You can now interact with the website locally in your browser.
 
 
 ## Program Walk-through
