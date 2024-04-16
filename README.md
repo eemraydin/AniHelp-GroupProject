@@ -47,6 +47,11 @@ To view the website locally, follow these steps:
 
 ## Program Walk-through
 
+Please check out our website [Here](https://anihelp-floor38.firebaseapp.com)
+And please check our Presentation [Here](./AniHelp-Presentation.pdf)
+
+
+
 
 ## Image Credits
 
